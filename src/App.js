@@ -2,8 +2,18 @@ import React, {useState} from 'react';
 import './App.css';
 
 
+function computeInitialCalculation(){
+  console.log('Compute initial calculation');
+  return Math.trunc(Math.random() * 20);
+}
+
+
 function App() {
-const [counter, setCounter] = useState(0);
+// const [counter, setCounter] = useState(computeInitialCalculation());
+// const [counter, setCounter] = useState(computeInitialCalculation);
+const [counter, setCounter] = useState(() => {
+   return computeInitialCalculation();
+});
 
 function increment() {
   // setCounter(counter + 1);
@@ -15,6 +25,7 @@ function increment() {
 function decrement() {
   setCounter(counter - 1);
 }
+
   return (
     <div className="App">
         <h1>Counter: {counter}</h1>
