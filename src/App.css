@@ -1,7 +1,15 @@
-.App {
-  text-align: center;
+* {
+  background-color: #282c34;
 }
 
+.App {
+  text-align: center;
+  color: #fff;
+}
+
+button {
+  color: #fff;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +43,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+pre {
+  width: 500px;
+}
+
+input {
+  color: white;
 }
