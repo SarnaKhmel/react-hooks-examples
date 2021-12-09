@@ -6,7 +6,11 @@ function App() {
 const [counter, setCounter] = useState(0);
 
 function increment() {
-  setCounter(counter + 1);
+  // setCounter(counter + 1);
+  // setCounter((prevCounter)=>{
+  //   return prevCounter + 1;
+  // });
+  setCounter(prev => prev + 1);
 }
 function decrement() {
   setCounter(counter - 1);
