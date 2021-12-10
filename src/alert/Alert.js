@@ -1,11 +1,14 @@
-import React, { useContext } from "react";
-import { AlertContext } from "../App.js";
+import React from "react";
+import { useAlert } from "./AlertContext.js";
+
 export default function Alert() {
-  const alert = useContext(AlertContext);
-  if (!alert) return null;
+  const alert = useAlert();
+  if (!alert.visible) return null;
   return (
     <>
-      <div className={"alert alert-danger"}>Wooooo, very fucking news</div>
+      <div className={"alert alert-danger"} onClick={alert.toggle}>
+        Wooooo, very fucking news
+      </div>
     </>
   );
 }
